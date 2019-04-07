@@ -1,0 +1,65 @@
+// Background SVG
+.header-bg {
+    position: relative;
+    height: 60vh;
+    background: #24C6DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--primary-dark), var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--primary-dark), var(--primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: var(--white);
+
+    @media only screen and (min-width: $bp-medium) {
+        height: 70vh;
+    }
+
+    .bg-svg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+      }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 60vh;
+
+    img {
+        display: none;
+
+        @media only screen and (min-width: $bp-medium) {
+            display: inline;
+            height: 350px;
+        }
+
+        @media only screen and (min-width: $bp-large) {
+            height: 420px;
+        }
+    }
+
+    @media only screen and (min-width: $bp-medium) {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+.content {
+    grid-column: 3 / span 4;
+    grid-row: 2 / span 2;
+
+    p {
+        margin-top: 5px;
+    }
+}
+
+.header-image {
+    display: inline-block;
+    grid-column: 7 / span 2;
+    grid-row: 2;
+}

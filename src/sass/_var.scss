@@ -1,0 +1,13 @@
+// -- Color CSS Variables -- //
+:root {
+    --yellow: #FFC600;
+    --black: #272727;
+    --white: #FFF;
+
+    --primary: #24C6DC;
+    --primary-dark: #514A9D;
+}
+
+// Media Queries
+$bp-large: 1024px; // iPad Pro
+$bp-medium: 768px; // iPad

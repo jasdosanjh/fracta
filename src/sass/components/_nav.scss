@@ -1,0 +1,153 @@
+.isToggled {
+	display: flex !important;
+}
+
+.full-screen-nav {
+	position: fixed;
+	max-height: 100vh;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	display: none;
+	justify-content: center;
+	align-items: center;
+    background: var(--primary);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--primary-dark), var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--primary-dark), var(--primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	.mobile {
+		display: block;
+		cursor: pointer;
+		height: 35px;
+		width: 35px;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		z-index: 9999;
+		svg {
+			fill: var(--white);
+			z-index: 999;
+		}
+	}
+	ul {
+		min-width: 300px;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	li {
+		display: flex;
+		a {
+			font-size: 2em;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			color: var(--white);
+			font-weight: 200;
+			transition: all 250ms ease-out;
+			&:hover {
+				margin-left: 10px;
+				font-weight: 500;
+
+			}
+		}
+	}
+}
+
+.nav-toggle {
+	cursor: pointer;
+}
+
+.nav-inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+	align-items: center;
+	margin-top: 15px;
+	width: 100%;
+	text-transform: uppercase;
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	.logo {
+		min-width: 40px;
+		min-height: 40px;
+		svg {
+			fill: var(--white);
+		}
+	}
+	nav {
+		display: none;
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+	}
+	li {
+
+		a {
+			font-size: 0.85em;
+			text-decoration: none;
+			&:hover {
+				// margin-top: -7px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.nav-inner {
+		padding: 0;
+		justify-content: space-around;
+	}
+	.nav-inner .nav-toggle {
+		display: none;
+	}
+	.nav-inner ul {
+		flex-direction: row;	
+	}
+	.nav-inner nav {
+		display: flex;
+	}
+	.nav-inner li {
+		margin-left: 10px;
+		a {
+			font-size: 0.85em;
+			display: inline-block;
+			padding: 10px;
+			text-decoration: none;
+			color: var(--white);
+			font-weight: 200;
+			transition: all 250ms ease-out;
+			&:hover {
+				margin-top: -7px;
+			}
+		}
+	}
+}
+
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+}
+.hover-underline-animation::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--white);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}

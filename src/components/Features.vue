@@ -1,0 +1,5 @@
+<template>
+<section class="features">
+    <h2>Features</h2>
+</section>
+</template>

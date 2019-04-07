@@ -1,0 +1,38 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    @media only screen and (min-width: $bp-medium) {
+        justify-content: flex-start;
+    }
+
+    .btn-light {
+        margin: 20px 8px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        border-radius: 3px;
+        background: var(--white);
+        color: var(--black);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
+
+        @media only screen and (min-width: $bp-medium) {
+            margin: 20px 10px 20px 0;
+
+        }
+    }
+
+    svg {
+        height: 25px;
+        margin: 0 2px;
+
+        @media only screen and (min-width: $bp-medium) {
+            
+        }
+    }
+}
