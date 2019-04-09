@@ -1,9 +1,9 @@
 <template>
 <header>
     <div class="content">
-        <h1>Fracta</h1>
-        <p>The only app you will ever need.</p>
-        <div class="buttons">
+        <h1 class="fade-in one">Fracta</h1>
+        <p class="fade-in one">The only app you will ever need.</p>
+        <div class="buttons fade-in two">
             <a href="#" class="btn-light">
             <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" version="1.1">
                 <g id="surface1">
@@ -22,7 +22,7 @@
         </div>
     </div>
         <div class="header-image">
-        <img src="images/phone.png" alt="" srcset="">
+        <img class="fade-in three" src="images/phone.png" alt="" srcset="">
     </div>
 
 </header>

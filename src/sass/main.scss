@@ -27,13 +27,13 @@
 // @import "_utility.sass"             // Utility classes, like .wrapper or .text-center
 
 
-// // ITCSS: OBJECTS - Grouped reusable chunks
+// // ITCSS: Views - View specific styles
+@import "views/_header";
+@import "views/_features";
 
 
 // // ITCSS: COMPONENTS - Component-specific styles
 @import "components/_nav";
-@import "components/_header";
-@import "components/features";
 @import "components/_buttons";
 
 // // ITCSS: CONTAINERS - styles that only apply when something is in a specific container

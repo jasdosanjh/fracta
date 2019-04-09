@@ -58,6 +58,11 @@
 	}
 }
 
+.logo {
+	color: var(--primary);
+	font-weight: 600;
+}
+
 .nav-toggle {
 	cursor: pointer;
 }
@@ -73,13 +78,7 @@
 	z-index: 100;
 	position: absolute;
 	top: 0;
-	.logo {
-		min-width: 40px;
-		min-height: 40px;
-		svg {
-			fill: var(--white);
-		}
-	}
+
 	nav {
 		display: none;
 	}
@@ -89,17 +88,21 @@
 		flex-direction: column;
 	}
 	li {
-
+		// margin-left: 10px;
 		a {
 			font-size: 0.85em;
+			// display: inline-block;
+			// padding: 10px;
 			text-decoration: none;
+			// color: white;
+			// font-weight: 200;
+			// transition: all 250ms ease-out;
 			&:hover {
 				// margin-top: -7px;
 			}
 		}
 	}
 }
-
 @media only screen and (min-width: 768px) {
 	.nav-inner {
 		padding: 0;
