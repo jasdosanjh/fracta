@@ -1,5 +1,19 @@
 .features {
     text-align: center;
+
+    &-video {
+        margin: 40px 0;
+
+        img {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+    }
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--grey);
+    margin: 50px;
 }
 
 .box {
@@ -58,24 +72,89 @@
     }
 
 }
-
+// Features icon colour change animation
 @keyframes colorchange {
-
     0% {
-        background-image: -webkit-linear-gradient(55deg, var(--primary) 0%, #75f094);
+        background-image: -webkit-linear-gradient(55deg, var(--primary) 0%, var(--green));
     }
-
     25% {
         background-image: -webkit-linear-gradient(55deg, var(--purple) 0%, var(--primary-dark));
         
     }
-
     50% {
         background-image: -webkit-linear-gradient(55deg, var(--pink) 0%, var(--light-blue));
     }
-
     75% {
-        
         background-image: -webkit-linear-gradient(55deg, var(--primary-dark) 0%, var(--primary));
+    }
+}
+
+.features-video {
+    position: relative;
+
+    svg {
+        position:absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        fill: #514B9E;
+        stroke: #514B9E;
+        padding: 20px;
+    
+        @media only screen and (min-width: $bp-extrasmall) {
+            top: 30%;
+        }
+    
+        @media only screen and (min-width: $bp-small) {
+            top: 35%;
+            padding: 10px;
+        }
+    
+        @media only screen and (min-width: $bp-medium) {
+            top: 40%;
+            padding: 0;
+        }
+    }
+}
+
+// Play button SVG animation
+@keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .stroke-dotted {
+    opacity: 0;
+    stroke-dasharray: 4,5;
+    stroke-width: 1px;
+    transform-origin: 50% 50%;
+    animation: spin 4s infinite linear;
+    transition: opacity 1s ease, 
+                stroke-width 1s ease;
+  }
+  .stroke-solid {
+    stroke-dashoffset: 0;
+    stroke-dashArray: 300;
+    stroke-width: 4px;
+    transition: stroke-dashoffset 1s ease, 
+                opacity 1s ease;
+  }
+  
+  .icon {
+    transform-origin: 50% 50%;
+    transition: transform 200ms ease-out;
+  }
+  
+
+#play:hover {
+    .stroke-dotted {
+        stroke-width: 4px;
+        opacity: 1;
+    }
+    .stroke-solid {
+        opacity: 0;
+        stroke-dashoffset: 300;
+    }
+    .icon {
+        transform: scale(1.05);
     }
 }

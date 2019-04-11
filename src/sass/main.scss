@@ -1,45 +1,31 @@
 // @charset "utf-8"                    // Character type for the stylesheet
 
-// // ITCSS: SETTINGS
-@import "var.scss";                 // Sass Variables - Does not effect page, but other Sass files reference this file.
+// ITCSS: SETTINGS
+// @import "var.scss";                 // Sass Variables - Does not effect page, but other Sass files reference this file.
 
 
-// // ITCSS: TOOLS
+// ITCSS: TOOLS
 // @import "_mixins.sass"              // Sass Mixins - Does not effect page, but other Sass files reference this file.
-// @import "_functions.sass"           // Sass Functions - Does not effect page, but other Sass files reference this file.
 
 
-// // ITCSS: RESETS - Remove inconsistencies in the way different browsers render elements by default
-// // npm install --save-dev meyer-sass normalize.css
+// ITCSS: RESETS - Remove inconsistencies in the way different browsers render elements by default
 @import "../../node_modules/meyer-sass/meyer.scss";  // The Eric Meyers resets - Good for older browsers and fringe cases.
 @import "../../node_modules/normalize.css/normalize"; // Normalize.css - Good for mobile and modern browsers
 
 
-// // ITCSS: FRAMEWORKS/THEMES
-
-
-// // ITCSS: PLUGINS
-
-
-// // ITCSS: GENERIC (ELEMENTS/BASE)
+// ITCSS: GENERIC (ELEMENTS/BASE)
 @import "base.scss";                // h1, h2, h3, p, etc.
-// @import "_layout.sass"              // General layout classes, like .col-xs-4
-// @import "_utility.sass"             // Utility classes, like .wrapper or .text-center
+@import "mediaqueries.scss";        // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
 
 
-// // ITCSS: Views - View specific styles
+
+// ITCSS: Sections - Section specific styles
 @import "views/_header";
 @import "views/_features";
 
 
-// // ITCSS: COMPONENTS - Component-specific styles
+// ITCSS: COMPONENTS - Component-specific styles
 @import "components/_nav";
 @import "components/_buttons";
 
-// // ITCSS: CONTAINERS - styles that only apply when something is in a specific container
 
-
-// // ITCSS: TRUMPS
-// @import "_mediaqueries.sass"        // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
-// @import "_trumps.sass"              // Use sparingly. These are meant to override above styles by using more specific selectors
-// @import "_shame.sass"               // This is code you wrote to meet a deadline and need to come back and fix later
