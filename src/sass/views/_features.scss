@@ -97,8 +97,8 @@
         top: 20%;
         left: 50%;
         transform: translateX(-50%);
-        fill: #514B9E;
-        stroke: #514B9E;
+        fill: var(--primary-dark);
+        stroke: var(--primary-dark);
         padding: 20px;
     
         @media only screen and (min-width: $bp-extrasmall) {
@@ -156,5 +156,60 @@
     }
     .icon {
         transform: scale(1.05);
+    }
+}
+
+.stats {
+    display: inline-block;
+    margin: 30px 60px;
+
+    @media only screen and (min-width:650px) {
+        margin: 30px 40px;
+    }
+
+    @media only screen and (min-width:809px) {
+        margin: 30px 50px;
+    }
+    
+    @media only screen and (min-width:950px) {
+        margin: 30px 13px;
+    }  
+    
+    @media only screen and (min-width: $bp-large) {
+        margin: 30px 22px;
+    }  
+    
+    @media only screen and (min-width: $bp-xl) {
+        margin: 30px 35px;
+    }    
+
+    @media only screen and (min-width: $bp-xxl) {
+        margin: 30px 50px;
+    }    
+
+    .container {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+
+        svg {
+            height: 60px;
+            fill: var(--purple);
+        }
+    }
+
+    &-content {
+        text-align: left;
+        margin: 0 20px;
+
+        span {
+            font-size: 35px;
+        }
+
+        p {
+            margin-left: 2px;
+            font-weight: 600;
+            color: var(--grey-dark);
+        }
     }
 }
