@@ -1,0 +1,221 @@
+.services {
+    padding: 20px 0;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(to right, var(--primary-dark), var(--primary));
+    animation: Gradient 5s ease infinite;
+	-webkit-animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+    
+    @media only screen and (min-width: $bp-medium) {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content {
+        grid-column: 4 / span 4;
+        grid-row: 1 / span 2;
+
+        
+        @media only screen and (min-width: 820px) {
+            grid-column: 2 / span 8;
+        }
+    }
+
+    img {
+        display: none;
+
+        @media only screen and (min-width: $bp-medium) {
+            display: inline;
+            height: 250px;
+        }
+
+        @media only screen and (min-width: 900px) {
+            height: 300px;
+        }
+
+        @media only screen and (min-width: $bp-xxl) {
+            height: 350px;
+        }
+    }
+
+    .subtitle {
+        margin-bottom: 40px;
+        color: var(--white);
+    }
+
+    &-image {
+        grid-column: 1 / span 2;
+        grid-row: 5 / span 10;
+        animation: MoveUpDown 1.8s linear infinite;
+        position: relative;
+
+        @media only screen and (min-width: 820px) {
+            grid-column: 2 / span 1;
+        }
+    }
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 25px;
+    }
+}
+
+.services-box {
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+    transition: all 0.3s ease-in;
+
+    @media only screen and (min-width: $bp-medium) {
+        margin: 10px;
+        padding: 10px;
+        grid-column: 5 / span 6;
+        grid-row: 6 / span 2;
+    }
+
+    @media only screen and (min-width: 820px) {
+        grid-column: 4 / span 7;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        grid-column: 4 / span 6;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    &-icon {
+        padding: 20px;
+        border-radius: 50%;
+        display: inline-block;
+    
+        svg {
+            height: 40px;
+            width: 40px;
+            fill: var(--white);
+        }
+    }
+
+    &-content {
+        padding: 0 20px;
+
+        h4 {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.services-box:hover {
+    border: 1px solid white;
+}
+
+.box2 {
+    @media only screen and (min-width: $bp-medium) {
+        grid-column: 5 / span 6;
+        grid-row: 8 / span 2;
+    }
+
+    @media only screen and (min-width: 820px) {
+        grid-column: 4 / span 7;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        grid-column: 4 / span 6;
+    }
+}
+
+.box3 {
+    @media only screen and (min-width: $bp-medium) {
+        grid-column: 5 / span 6;
+        grid-row: 10 / span 2;
+    }
+    
+    @media only screen and (min-width: 820px) {
+        grid-column: 4 / span 7;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        grid-column: 4 / span 6;
+    }
+}
+
+.box4 {
+    @media only screen and (min-width: $bp-medium) {
+        grid-column: 5 / span 6;
+        grid-row: 12 / span 1;
+    }
+
+    @media only screen and (min-width: 820px) {
+        grid-column: 4 / span 7;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        grid-column: 4 / span 6;
+    }
+}
+
+.icon-one {
+    background: var(--primary);
+}
+
+.icon-two {
+    background: var(--light-blue);
+}
+
+.icon-three {
+    background: var(--green);
+}
+
+.icon-four {
+    background: var(--purple);
+}
+
+// Background Gradient Animation
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}

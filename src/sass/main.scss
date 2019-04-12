@@ -15,17 +15,17 @@
 
 // ITCSS: GENERIC (ELEMENTS/BASE)
 @import "base.scss";                // h1, h2, h3, p, etc.
-@import "mediaqueries.scss";        // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
+@import "mediaqueries";        // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
 
 
 
 // ITCSS: Sections - Section specific styles
-@import "views/_header";
-@import "views/_features";
+@import "sections/_header";
+@import "sections/_features";
+@import "sections/_usability";
+@import "sections/_services";
 
 
 // ITCSS: COMPONENTS - Component-specific styles
 @import "components/_nav";
 @import "components/_buttons";
-
-

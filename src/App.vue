@@ -8,6 +8,8 @@
       <Header></Header>
     </div>
     <Features></Features>
+    <Usability></Usability>
+    <Services></Services>
   </div>
 </template>
 
@@ -15,13 +17,17 @@
 import Nav from './components/Nav.vue';
 import Header from './components/Header.vue';
 import Features from './components/Features.vue';
+import Usability from './components/Usability.vue';
+import Services from './components/Services.vue';
 
 export default {
   name: 'app',
   components: {
     Nav,
     Header,
-    Features
+    Features,
+    Usability,
+    Services
   }
 }
 </script>

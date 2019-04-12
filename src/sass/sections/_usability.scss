@@ -1,0 +1,136 @@
+.usability {
+    text-align: center;
+    margin: 20px 35px;
+
+    &-video {
+        position: relative;
+        margin: 40px 0;
+
+        img {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        svg {
+            position:absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            fill: var(--primary-dark);
+            stroke: var(--primary-dark);
+            padding: 20px;
+        
+            @media only screen and (min-width: $bp-extrasmall) {
+                top: 30%;
+            }
+        
+            @media only screen and (min-width: $bp-small) {
+                top: 35%;
+                padding: 10px;
+            }
+        
+            @media only screen and (min-width: $bp-medium) {
+                top: 40%;
+                padding: 0;
+            }
+        }
+    }
+
+    .stats {
+        display: inline-block;
+        margin: 30px 60px;
+    
+        @media only screen and (min-width:650px) {
+            margin: 30px 40px;
+        }
+    
+        @media only screen and (min-width:809px) {
+            margin: 30px 50px;
+        }
+        
+        @media only screen and (min-width:950px) {
+            margin: 30px 13px;
+        }  
+        
+        @media only screen and (min-width: $bp-large) {
+            margin: 30px 22px;
+        }  
+        
+        @media only screen and (min-width: $bp-xl) {
+            margin: 30px 35px;
+        }    
+    
+        @media only screen and (min-width: $bp-xxl) {
+            margin: 30px 50px;
+        }    
+    
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+    
+            svg {
+                height: 60px;
+                fill: var(--purple);
+            }
+        }
+    
+        &-content {
+            text-align: left;
+            margin: 0 20px;
+    
+            span {
+                font-size: 35px;
+            }
+    
+            p {
+                margin-left: 2px;
+                font-weight: 600;
+                color: var(--grey-dark);
+            }
+        }
+    }
+
+}
+
+// Play button SVG animation
+@keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .stroke-dotted {
+    opacity: 0;
+    stroke-dasharray: 4,5;
+    stroke-width: 1px;
+    transform-origin: 50% 50%;
+    animation: spin 4s infinite linear;
+    transition: opacity 1s ease, 
+                stroke-width 1s ease;
+  }
+  .stroke-solid {
+    stroke-dashoffset: 0;
+    stroke-dashArray: 300;
+    stroke-width: 4px;
+    transition: stroke-dashoffset 1s ease, 
+                opacity 1s ease;
+  }
+  
+  .icon {
+    transform-origin: 50% 50%;
+    transition: transform 200ms ease-out;
+  }
+  
+
+#play:hover {
+    .stroke-dotted {
+        stroke-width: 4px;
+        opacity: 1;
+    }
+    .stroke-solid {
+        opacity: 0;
+        stroke-dashoffset: 300;
+    }
+    .icon {
+        transform: scale(1.05);
+    }
+}
