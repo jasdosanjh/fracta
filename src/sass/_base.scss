@@ -2,6 +2,8 @@
     --black: #272727;
     --white: #FFF;
     --grey: #dee2e6;
+    --light-grey: #eee;
+    --grey-light-dark: #bdbdbd;
     --grey-dark: #505b6d;
 
     --primary: #24C6DC;
@@ -12,6 +14,7 @@
     --pink: #f075c7;
     --yellow: #FFC600;
     --green: #75f094;
+    --green-dark: #51ca80;
 }
 
 html {
@@ -48,6 +51,10 @@ h2 {
 h3 {
     font-size: 25px;
     margin: 30px 0 20px 0;
+}
+
+p {
+    line-height: 28px;
 }
 
 a {
