@@ -15,7 +15,8 @@
 
 .flex-container {
   display: flex;
-  padding: 30px 0;
+  justify-content: space-between;
+  padding: 30px 0px;
   max-width: 100%;
   align-items: center;
   color: var(--black);
@@ -23,11 +24,15 @@
 
 .flex-item {
   flex: 1;
-  width: 0;
-}
 
-.flex-item:not(:last-child) {
-  margin-right: 40px;
+  @media only screen and (min-width: $bp-medium) {
+    min-width: 200px;
+    margin: 0 10px;
+  }
+
+  @media only screen and (min-width: 900px) {
+    max-width: 420px;
+  }
 }
 
 .package {

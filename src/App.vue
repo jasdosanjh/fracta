@@ -12,6 +12,7 @@
     <Services></Services>
     <Pricing></Pricing>
     <Contact></Contact>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import Usability from './components/Usability.vue';
 import Services from './components/Services.vue';
 import Pricing from './components/Pricing.vue';
 import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'app',
@@ -33,7 +35,8 @@ export default {
     Usability,
     Services,
     Pricing,
-    Contact
+    Contact,
+    Footer
   },
   mounted: function() {
     document.addEventListener('DOMContentLoaded', () => {
