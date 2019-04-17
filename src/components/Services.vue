@@ -1,15 +1,15 @@
 <template>
-    <section class="services">
-        <div class="main-content">
-        <h2>Services</h2>
-        <p class="subtitle">Meeting your needs</p>
+    <section class="services" id="services-scroll">
+        <div class="main-content" v-scroll-reveal.reset:false="{ delay: 180 }">
+            <h2>Services</h2>
+            <p class="subtitle">Meeting your needs</p>
         </div>
 
- <div class="services-image">
-        <img src="images/phone2.png" alt="" srcset="">
+        <div class="services-image" v-scroll-reveal.reset:false="{ delay: 180 }">
+        <img src="images/phone2.png" alt="Image of two white mobile phones stack above each other showing different parts of the app.">
         </div>
 
-                <div class="services-box box1">
+        <div class="services-box box1" v-scroll-reveal.reset:false="{ delay: 180 }">
             <div class="container">
                 <div class="services-box-icon icon-one">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001">
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="services-box box2">
+        <div class="services-box box2" v-scroll-reveal.reset:false="{ delay: 180 }">
             <div class="container">
                 <div class="services-box-icon icon-two">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
@@ -33,7 +33,7 @@
                         <path d="M95.592 289.376a8 8 0 0 0-11.312 0l-33.936 33.936a8 8 0 0 0-.196 11.312 8 8 0 0 0 11.508 0l33.936-33.936c1.428-2.475-1.442-7.18 0-11.312zM143.396 289.376a8.001 8.001 0 0 0-11.116 0l-33.936 33.936a8 8 0 0 0-.196 11.312 8 8 0 0 0 11.508 0l33.936-33.936a8 8 0 0 0-.196-11.312zM317.46 114.344a8.001 8.001 0 0 0-11.116 0l-79.2 79.2a8 8 0 1 0 11.312 11.312l79.2-79.2a8 8 0 0 0-.196-11.312zM440.772 311.032a8 8 0 0 0-11.116 0l-22.624 22.624a8 8 0 0 0-.196 11.312 8 8 0 0 0 11.508 0l22.624-22.624a8 8 0 0 0-.196-11.312zM240.16 304h-.08a8 8 0 0 0 .08 16 8 8 0 0 0 0-16zM256 64h-32a8 8 0 0 0 0 16h32a8 8 0 0 0 0-16z"/>
                     </svg>
                 </div>
-                <div class="services-box-content">
+                <div class="services-box-content" v-scroll-reveal.reset:false="{ delay: 180 }">
                     <h4>Fully Responsive</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nulla.</p>
                 </div>
@@ -42,7 +42,7 @@
 
         <div class="services-box box3">
             <div class="container">
-                <div class="services-box-icon icon-three">
+                <div class="services-box-icon icon-three" v-scroll-reveal.reset:false="{ delay: 180 }">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333.135 333.135">
                         <path d="M308.771 128.916c.527-3.985.778-7.731.778-11.375 0-50.206-40.843-91.049-91.043-91.049-30.103 0-58.375 15.142-75.245 39.917-8.49-4.409-17.905-6.71-27.578-6.71-31.177 0-56.877 23.908-59.712 54.57C24.165 119.79 0 147.952 0 180.729c0 37.211 30.27 67.482 67.482 67.482h73.189v42.514c0 8.773 7.14 15.919 15.919 15.919h32.815c8.785 0 15.932-7.14 15.932-15.919v-42.513h60.316c37.218 0 67.482-30.27 67.482-67.482-.013-19.956-9.055-39.038-24.364-51.814zm-116.3 161.815a3.077 3.077 0 0 1-3.078 3.066h-32.815a3.07 3.07 0 0 1-3.066-3.066v-89.674h-43.343l60.123-77.938c1.658-2.147 3.747-2.147 5.399-.006l60.104 77.945h-43.33v89.673h.006zm73.169-55.367h-60.316v-21.453h30.791c5.887 0 10.444-2.391 12.487-6.562 2.044-4.171 1.17-9.235-2.436-13.895l-60.29-78.189c-3.278-4.235-7.969-6.665-12.879-6.665-4.917 0-9.615 2.429-12.879 6.665L99.796 193.46c-3.599 4.666-4.48 9.73-2.429 13.895 2.044 4.158 6.594 6.555 12.481 6.555h30.81v21.453H67.475c-30.123 0-54.628-24.506-54.628-54.628 0-28.066 21.89-51.955 49.847-54.384l5.855-.771v-5.893c0-25.99 21.144-47.128 47.128-47.128a46.897 46.897 0 0 1 26.119 7.905l5.688 3.792 3.432-5.906c13.99-24.056 39.884-38.998 67.584-38.998 43.118 0 78.189 35.078 78.189 78.195 0 4.055-.379 8.323-1.183 13.046l-.656 3.882 3.175 2.339c14.133 10.45 22.23 26.453 22.23 43.915.013 30.123-24.492 54.635-54.615 54.635z"/>
                     </svg>
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <div class="services-box box4">
+        <div class="services-box box4" v-scroll-reveal.reset:false="{ delay: 180 }">
             <div class="container">
                 <div class="services-box-icon icon-four">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
@@ -63,7 +63,7 @@
                         <path d="M344 392h16v56h-16zM344 360h16v16h-16zM416 72h16v16h-16zM416 104h16v16h-16zM416 136h16v16h-16zM48 168h16v16H48zM48 200h16v16H48zM48 232h16v16H48z"/>
                     </svg>
                 </div>
-                <div class="services-box-content">
+                <div class="services-box-content" v-scroll-reveal.reset:false="{ delay: 180 }">
                     <h4>Excellent Support</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nulla.</p>
                 </div>

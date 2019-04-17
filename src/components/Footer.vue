@@ -1,5 +1,5 @@
 <template>
-  <footer id="main-footer">
+  <footer id="main-footer" v-scroll-reveal.reset:false="{ delay: 180 }">
     <div class="container footer-container">
       <div class="footer-box">
         <h3>Fracta</h3>

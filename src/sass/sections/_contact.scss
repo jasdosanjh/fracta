@@ -1,5 +1,5 @@
-// Reservation
-.reservation {
+// contact
+.contact {
     display: flex;
     flex-direction: column;
 
@@ -34,8 +34,7 @@
 
 
         &:hover {
-            background: -webkit-linear-gradient(55deg, var(--primary) 0%, var(--green));      
-            
+            background: -webkit-linear-gradient(55deg, var(--primary) 0%, var(--green)); 
         }
     }
 }
@@ -54,28 +53,19 @@ img {
     justify-content: center;
     animation: MoveUpDown 1.8s linear infinite;
     position: relative;
-}
-}
-
-@keyframes MoveUpDown {
-    0%, 100% {
-      bottom: 0;
-    }
-    50% {
-      bottom: 25px;
     }
 }
 
-.reservation .contact-image, .reservation .contact-form {
+.contact .contact-image, .contact .contact-form {
     flex: 1;
 }
 
-.reservation .contact-form label {
+.contact .contact-form label {
     display: block;
 }
 
-.reservation .contact-form input,
-.reservation .contact-form textarea {
+.contact .contact-form input,
+.contact .contact-form textarea {
     width: 100%;
     padding: 10px 5px;
 }

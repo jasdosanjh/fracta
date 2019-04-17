@@ -21,8 +21,8 @@
             </svg>Google Play</a>
         </div>
     </div>
-        <div class="header-image">
-        <img class="fade-in three" src="images/phone.png" alt="" srcset="">
+    <div class="header-image">
+        <img class="fade-in three" src="images/phone.png" alt="Image of a white phone showcasing what the app looks like on a small device.">
     </div>
 
 </header>

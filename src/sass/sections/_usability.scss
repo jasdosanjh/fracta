@@ -10,6 +10,10 @@
             height: auto;
             max-width: 100%;
             border-radius: 20px;
+
+            @media only screen and (min-width: $bp-medium) {
+                max-width: 720px;
+            }
         }
 
         svg {
@@ -94,11 +98,7 @@
 
 }
 
-// Play button SVG animation
-@keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-  
+// Play Button
   .stroke-dotted {
     opacity: 0;
     stroke-dasharray: 4,5;

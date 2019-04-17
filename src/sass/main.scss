@@ -18,6 +18,11 @@
 @import "mediaqueries";        // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
 
 
+// ITCSS: COMPONENTS - Component-specific styles
+@import "components/_nav";
+@import "components/_buttons";
+@import "components/animation";
+
 
 // ITCSS: Sections - Section specific styles
 @import "sections/_header";
@@ -27,8 +32,3 @@
 @import "sections/_pricing";
 @import "sections/_contact";
 @import "sections/_footer";
-
-
-// ITCSS: COMPONENTS - Component-specific styles
-@import "components/_nav";
-@import "components/_buttons";
