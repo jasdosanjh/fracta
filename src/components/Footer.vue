@@ -37,7 +37,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-box">
+      <div class="footer-box copyright">
         <p>
           Copyright &copy; 2019, All Rights Reserved
         </p>
