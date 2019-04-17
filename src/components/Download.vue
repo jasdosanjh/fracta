@@ -1,9 +1,9 @@
 <template>
-<header>
-    <div class="content">
-        <h1 class="fade-in one">Fracta</h1>
-        <p class="fade-in one">The only app you will ever need.</p>
-        <div class="buttons fade-in two">
+    <section class="download">
+        <div class="download-content" v-scroll-reveal.reset:false="{ delay: 180 }">
+            <h2>Download Now</h2>
+            <p class="subtitle">Available on Android and Apple.</p>
+            <div class="download-buttons">
             <a href="#" class="btn-light">
             <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" version="1.1">
                 <g>
@@ -20,16 +20,6 @@
                 </g>
             </svg>Google Play</a>
         </div>
-    </div>
-    <div class="header-image">
-        <img class="fade-in three" src="images/phone.png" alt="Image of a white phone showcasing what the app looks like on a small device.">
-    </div>
-
-</header>
+        </div>
+    </section>
 </template>
-
-<script>
-export default {
-    
-}
-</script>

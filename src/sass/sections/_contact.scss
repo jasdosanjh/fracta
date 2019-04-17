@@ -41,7 +41,11 @@
 
 img {
     margin-top: 50px;
-    height: 450px;
+    height: 350px;
+
+    @media only screen and (min-width: $bp-large) {
+        height: 450px;
+    }
 }
 
 .contact-image {

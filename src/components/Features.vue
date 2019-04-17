@@ -1,5 +1,5 @@
 <template>
-  <section class="features" id="features-scroll" v-scroll-reveal.reset:false="{ delay: 650 }">
+  <section class="features" id="features-scroll" v-scroll-reveal.reset:false="{ delay: 500 }">
     <h2>Features</h2>
     <p class="subtitle">Core Features</p>
     <!-- Features Icons -->

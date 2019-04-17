@@ -11,6 +11,7 @@
     <Usability></Usability>
     <Services></Services>
     <Pricing></Pricing>
+    <Download></Download>
     <Contact></Contact>
     <Footer></Footer>
   </div>
@@ -23,6 +24,7 @@ import Features from './components/Features.vue';
 import Usability from './components/Usability.vue';
 import Services from './components/Services.vue';
 import Pricing from './components/Pricing.vue';
+import Download from './components/Download.vue';
 import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
 
@@ -35,6 +37,7 @@ export default {
     Usability,
     Services,
     Pricing,
+    Download,
     Contact,
     Footer
   },

@@ -1,7 +1,7 @@
 <template>
 <section class="pricing">
   <h2 v-scroll-reveal.reset:false="{ delay: 180 }">Pricing</h2>
-  <p v-scroll-reveal.reset:false="{ delay: 180 }">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit architecto doloribus animi similique sed voluptates.</p>
+  <p class="subtitle" v-scroll-reveal.reset:false="{ delay: 180 }">Flexible pricing plans.</p>
 	<div class="flex-container" v-scroll-reveal.reset:false="{ delay: 180 }">
   <div class="flex-item">
     <ul class="package">
