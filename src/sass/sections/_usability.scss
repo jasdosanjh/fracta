@@ -72,11 +72,10 @@
         .container {
             display: flex;
             align-items: center;
-            margin: 5px 0;
     
-            svg {
-                height: 60px;
-                fill: var(--purple);
+            img {
+                margin: 0;
+                height: 55px;
             }
         }
     
