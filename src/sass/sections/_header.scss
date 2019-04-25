@@ -8,7 +8,15 @@
     color: var(--white);
 
     @media only screen and (min-width: $bp-medium) {
-        height: 70vh;
+        height: 65vh;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        height: 80vh;
+    }
+
+    @media only screen and (min-width: $bp-xxl) {
+        height: 85vh;
     }
 
     .bg-svg {
@@ -42,7 +50,7 @@ header {
     @media only screen and (min-width: $bp-medium) {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        grid-row-gap: 15px;
+        grid-template-rows: auto;
         justify-content: center;
         align-items: center;
         text-align: left;
@@ -51,7 +59,11 @@ header {
 
 .content {
     grid-column: 3 / span 4;
-    grid-row: 1 / span 1;
+    grid-row: 1;
+
+    @media only screen and (min-width: $bp-xxl) {
+        grid-row: 10;
+    }
 
     p {
         margin-top: 5px;
@@ -61,7 +73,11 @@ header {
 .header-image {
     display: inline-block;
     grid-column: 7 / span 2;
-    grid-row: 1 / span 1;
+    grid-row: 1;
     position: relative;
     animation: MoveUpDown 1.8s linear infinite;
+
+    @media only screen and (min-width: $bp-xxl) {
+        grid-row: 10;
+    }
 }

@@ -87,8 +87,9 @@
     &-icon {
         padding: 20px;
         display: inline-block;
-        background: -webkit-linear-gradient(55deg, var(--primary) 0%, var(--green));
         border-radius: 50px;
+        background: -webkit-linear-gradient(55deg, var(--primary) 0%, var(--green));
+
     
         img {
             height: 45px;
@@ -153,20 +154,4 @@
     @media only screen and (min-width: 980px) {
         grid-column: 4 / span 6;
     }
-}
-
-.icon-one {
-    background: var(--primary);
-}
-
-.icon-two {
-    background: var(--light-blue);
-}
-
-.icon-three {
-    background: var(--green);
-}
-
-.icon-four {
-    background: var(--purple);
 }
