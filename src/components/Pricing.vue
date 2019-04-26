@@ -5,7 +5,7 @@
     <div class="flex-container" v-scroll-reveal.reset:false="{ delay: 180 }">
       <div class="flex-item" v-for="(pricing, pricingIndex) in pricings" :key="'pricing' + pricingIndex">
         <div class="package">
-          <h3 class="header">{{ pricing.title }}</h3>
+          <h3 :class="'header-' + pricingIndex">{{ pricing.title }}</h3>
           <p class="gray">{{ pricing.price }}</p>
             <ul>
               <li 
@@ -15,40 +15,10 @@
               </li>
             </ul>
           <div class="gray">
-              <button class="green">{{ pricing.button }}</button>
+              <button :class="'btn-pricing-' + pricingIndex">{{ pricing.button }}</button>
           </div>
         </div>
       </div>
-      <!-- <div class="flex-item">
-          <div class="package">
-            <h3 class="header purple">Premium</h3>
-            <p class="gray">£20/month</p>
-            <ul>
-              <li>100GB Storage</li>
-              <li>500 Domains</li>
-              <li>2TB Bandwidth</li>
-              <li>1000 Email Boxes</li>
-            </ul>
-            <div class="gray">
-              <button class="purple">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="flex-item">
-          <div class="package">
-            <h3 class="header pink">Pro</h3>
-            <p class="gray">£20/month</p>
-            <ul>
-              <li>250GB Storage</li>
-              <li>500 Domains</li>
-              <li>5TB Bandwidth</li>
-              <li>1000 Email Boxes</li>
-            </ul>
-            <div class="gray">
-              <button class="pink">Add to Cart</button>
-            </div>
-          </div>
-      </div> -->
     </div>
   </section>
 </template>

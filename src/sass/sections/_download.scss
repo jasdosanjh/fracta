@@ -3,13 +3,25 @@
     text-align: center;
     background: var(--primary);  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, var(--primary-dark), var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(var(--primary-dark)), to(var(--primary)));
+    background: -webkit-linear-gradient(left, var(--primary-dark), var(--primary));
+    background: -o-linear-gradient(left, var(--primary-dark), var(--primary));
     background: linear-gradient(to right, var(--primary-dark), var(--primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: var(--white);
 
     &-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
 
         .subtitle {
@@ -20,6 +32,8 @@
     }
 
     &-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }

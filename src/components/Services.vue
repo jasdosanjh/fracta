@@ -9,7 +9,7 @@
         <img src="images/phone2.png" alt="Image of two white mobile phones stack above each other showing different parts of the app.">
         </div>
 
-        <div class="services-box box1" v-for="(service, serviceIndex) in services" :key="'service' + serviceIndex" v-scroll-reveal.reset:false="{ delay: 180 }">
+        <div :class="'services-box services-box-' + serviceIndex" v-for="(service, serviceIndex) in services" :key="'service' + serviceIndex" v-scroll-reveal.reset:false="{ delay: 180 }">
             <div class="container">
                 <div class="services-box-icon">
                     <img :src="service.svg">

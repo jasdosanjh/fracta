@@ -1,4 +1,6 @@
 .isToggled {
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
 	display: flex !important;
 }
 
@@ -12,10 +14,16 @@
 	right: 0;
 	z-index: 200;
 	display: none;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-ms-grid-row-align: center;
 	align-items: center;
     background: var(--primary);  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, var(--primary-dark), var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(left, var(--primary-dark), var(--primary));
     background: linear-gradient(to right, var(--primary-dark), var(--primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 	.mobile {
@@ -35,11 +43,20 @@
 	ul {
 		min-width: 300px;
 		list-style: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 	}
 	li {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		a {
 			font-size: 2em;
@@ -48,6 +65,7 @@
 			text-decoration: none;
 			color: var(--white);
 			font-weight: 200;
+			-webkit-transition: all 250ms ease-out;
 			transition: all 250ms ease-out;
 			&:hover {
 				margin-left: 10px;
@@ -68,9 +86,15 @@
 }
 
 .nav-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 0 30px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	margin-top: 15px;
 	width: 100%;
@@ -84,37 +108,40 @@
 	}
 	ul {
 		list-style: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 	li {
-		// margin-left: 10px;
+
 		a {
 			font-size: 0.85em;
-			// display: inline-block;
-			// padding: 10px;
 			text-decoration: none;
-			// color: white;
-			// font-weight: 200;
-			// transition: all 250ms ease-out;
-			&:hover {
-				// margin-top: -7px;
-			}
 		}
 	}
 }
 @media only screen and (min-width: 768px) {
 	.nav-inner {
 		padding: 0;
+		-ms-flex-pack: distribute;
 		justify-content: space-around;
 	}
 	.nav-inner .nav-toggle {
 		display: none;
 	}
 	.nav-inner ul {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;	
 	}
 	.nav-inner nav {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 	.nav-inner li {
@@ -126,6 +153,7 @@
 			text-decoration: none;
 			color: var(--white);
 			font-weight: 200;
+			-webkit-transition: all 250ms ease-out;
 			transition: all 250ms ease-out;
 			&:hover {
 				margin-top: -7px;
@@ -138,19 +166,26 @@
 	display: inline-block;
 	position: relative;
 }
-.hover-underline-animation::after {
+.hover-underline-animation:after {
 	content: '';
 	position: absolute;
 	width: 100%;
+	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	height: 2px;
 	bottom: 0;
 	left: 0;
 	background-color: var(--white);
+	-webkit-transform-origin: bottom right;
 	transform-origin: bottom right;
+	-webkit-transition: -webkit-transform 0.25s ease-out;
+	transition: -webkit-transform 0.25s ease-out;
 	transition: transform 0.25s ease-out;
+	transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
-.hover-underline-animation:hover::after {
+.hover-underline-animation:hover:after {
+	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
+	-webkit-transform-origin: bottom left;
 	transform-origin: bottom left;
 }

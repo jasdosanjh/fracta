@@ -1,47 +1,40 @@
 <template>
-  <footer id="main-footer" v-scroll-reveal.reset:false="{ delay: 180 }">
+  <footer class="main-footer" v-scroll-reveal.reset:false="{ delay: 180 }">
     <div class="container footer-container">
-      <div class="footer-box">
-        <h3>Fracta</h3>
+      <div :class="'footer-box footer-box-' + footerInfoIndex" v-for="(footerInfo, footerInfoIndex) in footerInformation" :key="'footerInfo' + footerInfoIndex">
+        <h3>{{ footerInfo.title }}</h3>
         <ul class="list">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Download</a></li>
-          <li><a href="#">Security</a></li>
-          <li><a href="#">Business</a></li>
+          <li v-for="(link, linkIndex) in footerInfo.links" :key="'footerInfo' + footerInfoIndex + 'link' + linkIndex"><a href="#"> {{ link }} </a></li>
         </ul>
       </div>
-      <div class="footer-box">
-        <h3>Company</h3>
-        <ul class="list">
-          <li><a href="#">About</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Terms</a></li>
-        </ul>
-      </div>
-      <div class="footer-box">
-        <h3>Download</h3>
-        <ul class="list">
-          <li><a href="#">Windows</a></li>
-          <li><a href="#">Mac</a></li>
-          <li><a href="#">Apple</a></li>
-          <li><a href="#">Android</a></li>
-        </ul>
-      </div>
-      <div class="footer-box">
-        <h3>Suppport</h3>
-        <ul class="list">
-          <li><a href="#">Help & Support</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-box copyright">
-        <p>
-          Copyright &copy; 2019, All Rights Reserved
-        </p>
+      <div class="footer-box copyright"> 
+        <p>Copyright &copy; 2019, All Rights Reserved</p>
       </div>
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    footerInformation: [
+      {
+        title: "Fracta",
+        links: ["Features", "Downloads", "Security", "Business"],
+      },
+      {
+        title: "Company",
+        links: ["About", "News", "Blog", "Terms"],
+      },
+      {
+        title: "Download",
+        links: ["Windows", "Mac", "Apple", "Android"],
+      },
+      {
+        title: "Support",
+        links: ["Help & Support", "Privacy Policy", "About Us", "Contact"],
+      }
+    ]
+  })
+}
+</script>

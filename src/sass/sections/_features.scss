@@ -22,8 +22,11 @@
             padding: 20px;
             display: inline-block;
             border-radius: 50%;
-            background-image: -webkit-linear-gradient(55deg, #75b2f0 0%, #75f094);
+            background-image: -webkit-linear-gradient(55deg, var(--blue) 0%, var(--green));
+            -webkit-animation: colorchange 5s linear infinite;
             animation: colorchange 5s linear infinite;
+            -webkit-transition: all 0.3 ease-in;
+            -o-transition: all 0.3 ease-in;
             transition: all 0.3 ease-in;
         }
     

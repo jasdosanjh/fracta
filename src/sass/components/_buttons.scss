@@ -1,9 +1,15 @@
 .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 10px;
 
     @media only screen and (min-width: $bp-medium) {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 }
@@ -11,7 +17,11 @@
 .btn-light {
     margin: 20px 8px;
     padding: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: 3px;
     background: var(--white);

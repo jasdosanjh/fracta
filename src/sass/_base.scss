@@ -5,11 +5,10 @@
     --light-grey: #eee;
     --grey-light-dark: #bdbdbd;
     --grey-dark: #505b6d;
-
     --primary: #24C6DC;
     --primary-dark: #514A9D;
-
     --light-blue: #9191ff;
+    --blue: #75b2f0;
     --purple: #b275f0;
     --pink: #f075c7;
     --yellow: #FFC600;
@@ -18,6 +17,7 @@
 }
 
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -25,7 +25,8 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
